@@ -12,4 +12,5 @@ This is an aggregated list of all of the technologies currently in use:
 - [MySQL](https://www.mysql.com)
 - [Tailwind CSS](https://tailwindcss.com)
 - [Flowbite](https://flowbite.com)
+- [Jotai](https://jotai.com)
 - [tRPC](https://trpc.io)
