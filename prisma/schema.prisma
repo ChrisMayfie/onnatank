@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+//Prisma generates a model for the table in the database
+model vehicle {
+  vehicle_id      Int    @id @unique(map: "vehicle_id")
+  vehicle_year    String @db.Char(4)
+  vehicle_make    String @db.VarChar(50)
+  vehicle_model   String @db.VarChar(50)
+  vehicle_mpg     Int
+  vehicle_gallons Int
+
+//Prisma generates a unique index for the combination of vehicle_year, vehicle_make, vehicle_model
+  @@unique([vehicle_year, vehicle_make, vehicle_model])
+}
