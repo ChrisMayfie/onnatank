@@ -5,6 +5,7 @@ import { Fragment, useEffect, useState } from "react";
 import Script from "next/script";
 import { api } from "~/utils/api";
 import VehicleSelection from "~/componets/vehicleSelection";
+import GeoLocation from "~/componets/geoLocation";
 import { vehicle } from "@prisma/client";
 import { atom, useAtomValue } from "jotai";
 
@@ -43,6 +44,8 @@ const Home: NextPage = () => {
         </div>
 
         <VehicleSelection />
+
+        <GeoLocation />
 
         <p>{JSON.stringify(vehicle, null, 2)}</p>
         <p>Range: {range}</p>
