@@ -10,9 +10,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@googlemaps/react-wrapper": "^1.1.35",
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
     "@prisma/client": "^4.11.0",
+    "@react-google-maps/api": "^2.18.1",
     "@tanstack/react-query": "^4.26.1",
     "@trpc/client": "^10.9.0",
     "@trpc/next": "^10.16.0",
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.21.2",
+    "@types/google.maps": "^3.52.5",
     "@types/node": "^18.15.3",
     "@types/prettier": "^2.7.2",
     "@types/react": "^18.0.31",

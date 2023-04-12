@@ -112,7 +112,7 @@ const VehicleSelection = () => {
           defaultValue={"Vehicle Model"}
           onChange={(val) => setVehicleModel(val.currentTarget.value)}
         >
-          <option selected>Vehicle Model</option>
+          <option>Vehicle Model</option>
           {models?.map((model, index) => (
             <option key={index} value={model}>
               {model}

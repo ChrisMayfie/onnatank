@@ -4,10 +4,11 @@ import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import Script from "next/script";
 import { api } from "~/utils/api";
-import VehicleSelection from "~/componets/vehicleSelection";
-import GeoLocation from "~/componets/geoLocation";
+import VehicleSelection from "~/components/vehicleSelection";
+import GeoLocation from "~/components/geoLocation";
 import { vehicle } from "@prisma/client";
 import { atom, useAtomValue } from "jotai";
+import Map from "~/components/map";
 
 //Global atoms for selected vehicle and vehicle range
 export const vehicleRangeAtom = atom<number>(0);
@@ -15,11 +16,11 @@ export const selectedVehicleAtom = atom<vehicle | null>(null);
 
 //Derived atom for distance based on selected vehicle, vehicle range, and vehicle mpg
 export const distanceAtom = atom((get) =>
-  (
+  Math.floor(
     (get(selectedVehicleAtom)?.vehicle_mpg ?? 0) *
       (get(selectedVehicleAtom)?.vehicle_gallons ?? 0) *
       get(vehicleRangeAtom) || 0
-  ).toFixed(0)
+  )
 );
 
 //Home page component
@@ -46,6 +47,8 @@ const Home: NextPage = () => {
         <VehicleSelection />
 
         <GeoLocation />
+
+        <Map />
 
         <p>{JSON.stringify(vehicle, null, 2)}</p>
         <p>Range: {range}</p>
