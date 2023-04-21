@@ -37,8 +37,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex min-h-screen flex-col items-center bg-white">
-        <div className="justify-top container flex flex-col items-center gap-12 py-32 px-4 ">
+      <main className="flex min-h-screen flex-col items-center">
+        <div className="justify-top container flex flex-col items-center gap-12 py-14 px-4 ">
           <h1 className="text-5xl font-light tracking-tight text-black sm:text-[5rem]">
             Onnatank
           </h1>
@@ -50,9 +50,9 @@ const Home: NextPage = () => {
 
         <Map />
 
-        <p>{JSON.stringify(vehicle, null, 2)}</p>
+        {/* <p>{JSON.stringify(vehicle, null, 2)}</p>
         <p>Range: {range}</p>
-        <p>Distance: {distance}</p>
+        <p>Distance: {distance}</p> */}
       </main>
     </>
   );
