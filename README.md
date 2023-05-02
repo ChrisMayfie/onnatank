@@ -16,3 +16,4 @@ This is an aggregated list of all of the technologies currently in use:
 - [Jotai](https://jotai.org)
 - [tRPC](https://trpc.io)
 - [Google Maps API](https://developers.google.com/maps)
+- [React Google Maps API Library](https://react-google-maps-api-docs.netlify.app/)
