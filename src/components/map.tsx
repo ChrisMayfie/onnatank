@@ -6,6 +6,7 @@ import {
   StandaloneSearchBox,
   MarkerF,
   DirectionsRenderer,
+  Marker,
 } from "@react-google-maps/api";
 import { env } from "~/env.mjs";
 import useGeoLocation from "~/hooks/useGeoLocation";
@@ -143,6 +144,14 @@ function MyComponent() {
                       lat: geometry?.location?.lat() ?? 0,
                       lng: geometry?.location?.lng() ?? 0,
                     },
+                    icon: {
+                      path: google.maps.SymbolPath.CIRCLE,
+                      fillColor: "#0000FF",
+                      fillOpacity: 1,
+                      strokeColor: "0000FF",
+                      strokeWeight: 2,
+                      scale: 10,
+                    },
                   });
 
                   marker.addListener("click", () => {
@@ -160,7 +169,7 @@ function MyComponent() {
             >
               <input
                 type="text"
-                placeholder="Customized your placeholder"
+                placeholder="Search For Places Here"
                 style={{
                   boxSizing: `border-box`,
                   border: `1px solid transparent`,
