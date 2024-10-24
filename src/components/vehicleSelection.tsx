@@ -135,7 +135,9 @@ const VehicleSelection = () => {
           <option selected>Amount of Gas</option>
           <option value="0.15">Near Empty</option>
           <option value="0.25">About a Quarter Full</option>
+          <option value="0.33">About a Third Full</option>
           <option value="0.5">Half Way Full</option>
+          <option value="0.66">About Two Thirds Full</option>
           <option value="0.75">About Three Quarters Full</option>
           <option value="0.85">Near Full</option>
           <option value="1.0">Completely Full</option>

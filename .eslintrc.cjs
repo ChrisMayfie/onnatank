@@ -19,6 +19,7 @@ const config = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   rules: {
     "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-var-requires": "off",
     // "@typescript-eslint/consistent-type-imports": [
     //   "warn",
     //   {
